@@ -1,0 +1,11 @@
+.header{
+  background: #333333;
+  height: 2.9rem;
+  padding: 0.8rem 0 0.9rem;
+}
+
+.header svg {
+  margin-left: 10%;
+  height: 90%;
+  fill: #66cccc;
+}
