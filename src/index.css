@@ -1,0 +1,40 @@
+/* variables */
+:root{
+  --headerHeight: 3.0rem;
+  /* --highlightColor: #66cccc; this color was returned by PS*/
+  --highlightColor: #26ffff; /*this color looks more correct to me*/
+  --hoverColor: #009696; /* color for hover effect*/
+  --leftMargin: 10% /* left margin for text alignment*/
+}
+
+
+/* resets box sizing */
+* {
+  box-sizing: border-box;
+
+  /* font-family: 'Open Sans', sans-serif; */
+}
+
+/* set custom fonts*/
+@font-face {
+  font-family: 'LatoReg';
+  src: url(./assets/fonts/Lato/Lato-Regular.ttf)
+}
+
+@font-face {
+  font-family: 'LatoThin';
+  src: url(./assets/fonts/Lato/Lato-Thin.ttf)
+}
+
+@font-face {
+  font-family: 'OpenSansReg';
+  src: url(./assets/fonts/Open_Sans/OpenSans-Regular.ttf)
+}
+
+/* resets margins and padding*/
+html, 
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'LatoReg', sans-serif;
+}

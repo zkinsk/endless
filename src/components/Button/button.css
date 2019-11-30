@@ -1,0 +1,17 @@
+.startButton{
+  font-size: 70%;
+  font-weight: 700;
+  color: #404040;
+  padding: 0.2rem 0.8rem;
+  background-color: var(--highlightColor);
+  border: var(--highlightColor) solid;
+  border-radius: 2rem;
+  transition-duration: 0.5s;
+}
+
+.startButton:hover{
+  background-color: var(--hoverColor);
+  border: var(--hoverColor) solid;
+  color: white;
+
+}

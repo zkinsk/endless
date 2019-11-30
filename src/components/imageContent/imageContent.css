@@ -1,0 +1,24 @@
+.imageBackground{
+  position: relative;
+  height: calc(100vh - var(--headerHeight)); /* full vp height minus height of header set as var in index.css*/
+  background-image: url('./images/photo-couch_2x.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+
+.imageBackground .textContent{
+  position: absolute;
+  bottom: 10%;
+  color: white;
+  margin-left: var(--leftMargin);/* Left Padding set in index.css*/
+}
+
+.imageBackground .textContent p {
+  width: 400px;
+}
+
+.imageBackground .textContent h1{
+  font-family: 'LatoThin', sans-serif;
+  margin-left: 0.2rem;
+}
