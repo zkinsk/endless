@@ -30,6 +30,10 @@
 }
 
 @media (max-width: 576px) {
+  .imageBackground{
+    background-image: url('./images/photo-couch.jpg');
+
+  }
 
   .imageBackground .textContent p {
     width: 90%;

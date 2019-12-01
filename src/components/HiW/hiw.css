@@ -1,23 +1,16 @@
 .hIwBox{
   background-color: lightgray;
-  /* display: flex;
-  justify-content: center; */
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
+  padding-bottom: 20px;
 }
 
 .hIwHeader{
-  grid-column-start: 1;
-  grid-column-end: 5;
-  grid-row-start: 1;
-  grid-row-end: 2;
+  padding: 20px 0 30px;
   text-align: center;
 }
 
 .hIwSteps{
-  grid-column-start: 2;
-  grid-column-end: 4;
+  margin-left: var(--leftMargin);
+  padding-right: var(--leftMargin);
   text-align: center;
   display: flex;
   justify-content: center;
@@ -27,6 +20,7 @@
 
   .hIwSteps{
     margin: auto;
+    padding-right: 0;
     display: block;
     width: 90%;
     justify-content: center;

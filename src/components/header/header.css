@@ -1,4 +1,7 @@
 .header{
+  position: sticky;
+  top: 0;
+  z-index: 100;
   background: var(--backgroundColor);
   height: var(--headerHeight);/* Header height set in index.css*/
   padding: 0.8rem 0 0.9rem;
