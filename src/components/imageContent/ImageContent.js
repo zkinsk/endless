@@ -3,7 +3,7 @@ import './imageContent.css';
 
 import Button from '../Button/Button'
 
-export default function ImageContent() {
+export default function ImageContent(props) {
   return (
     <div className='imageBackground'>
       <div className='textContent'>
@@ -12,7 +12,7 @@ export default function ImageContent() {
         <h1>
           Montly packages.
           <br/>
-          Excitment deliverd daily.
+          Excitment delivered daily.
         </h1>
  
         <p>
@@ -21,10 +21,8 @@ export default function ImageContent() {
           <br/>
           You'll get new stuff on your doorstep &#8212; every month.
         </p>
-        <Button>GET STARTED</Button>
-
+        <Button buttonClick = {props.buttonClick}>GET STARTED</Button>
       </div>
-
     </div>
   )
 }

@@ -10,7 +10,7 @@
 .imageBackground .textContent{
   position: absolute;
   bottom: 10%;
-  color: white;
+  color: var(--textColor);
   margin-left: var(--leftMargin);/* Left Padding set in index.css*/
 }
 

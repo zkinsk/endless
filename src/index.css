@@ -1,18 +1,19 @@
 /* variables */
 :root{
   --headerHeight: 3.0rem;
+  --leftMargin: 10%; /* left margin for text alignment*/
+
   /* --highlightColor: #66cccc; this color was returned by PS*/
   --highlightColor: #26ffff; /*this color looks more correct to me*/
   --hoverColor: #009696; /* color for hover effect*/
-  --leftMargin: 10% /* left margin for text alignment*/
-}
+  --backgroundColor:  #333333; /*Background color for header and other elements*/
+  --textColor: white; /*Text color for light colored text*/
 
+}
 
 /* resets box sizing */
 * {
   box-sizing: border-box;
-
-  /* font-family: 'Open Sans', sans-serif; */
 }
 
 /* set custom fonts*/
@@ -37,4 +38,13 @@ body{
   margin: 0;
   padding: 0;
   font-family: 'LatoReg', sans-serif;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+body {
+  -ms-overflow-style: none;
 }
