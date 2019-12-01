@@ -22,6 +22,14 @@ class App extends React.Component{
     // console.log(this.state)
   };
 
+  componentDidUpdate() {
+    this.scrollToBottom();
+  }
+
+  scrollToBottom = () => {
+    this.messagesEnd.scrollIntoView({ behavior: "smooth" });
+  }
+
   clickStart = () => {
     let started = this.state.started === false;
     this.setState({started: started});
@@ -65,6 +73,9 @@ class App extends React.Component{
       <Header>{/* Header only contains logo svg */}</Header>
       <ImageContent buttonClick = {this.clickStart}/>
       {this.state.started && <HiW steps = {this.state.currentSteps}/>}
+      <div style={{ float:"left", clear: "both" }}
+             ref={(el) => { this.messagesEnd = el; }}>
+        </div>
     </div>
     )
   }

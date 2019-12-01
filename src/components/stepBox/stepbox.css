@@ -1,11 +1,29 @@
 .stepBox{
   width: 15%;
-  margin-left: 20px;
-  margin-right: 20px;
+  /* margin-left: 20px;
+  margin-right: 20px; */
+  margin: 0 auto;
 }
 
 .stepNumber h1{
   display: inline;
   border-bottom: var(--highlightColor) solid 2px;
   padding-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+
+  .stepBox{
+    width: 50%;
+    margin-bottom: 1rem;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .stepBox{
+    width: 90%
+  }
+
 }

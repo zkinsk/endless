@@ -22,3 +22,17 @@
   font-family: 'LatoThin', sans-serif;
   margin-left: 0.2rem;
 }
+
+
+@media (max-width: 768px) {
+
+
+}
+
+@media (max-width: 576px) {
+
+  .imageBackground .textContent p {
+    width: 90%;
+  }
+
+}

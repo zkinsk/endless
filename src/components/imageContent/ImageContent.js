@@ -10,9 +10,9 @@ export default function ImageContent(props) {
         <p>New Games &amp; Accessories</p>
 
         <h1>
-          Montly packages.
+          Monthly packages.
           <br/>
-          Excitment delivered daily.
+          Excitement delivered daily.
         </h1>
  
         <p>
