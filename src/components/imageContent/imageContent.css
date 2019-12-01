@@ -18,9 +18,14 @@
   width: 400px;
 }
 
+.imageBackground .textContent p:last-of-type{
+  padding-bottom: 20px;
+}
+
 .imageBackground .textContent h1{
   font-family: 'LatoThin', sans-serif;
   margin-left: 0.2rem;
+  padding: 10px 0;
 }
 
 
