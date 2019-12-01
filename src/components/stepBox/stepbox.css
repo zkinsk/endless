@@ -10,12 +10,16 @@
 
 .stepNumber h1{
   display: inline;
-  border-bottom: var(--highlightColor) solid 2px;
+  border-bottom: var(--highlightColor) solid 3px;
   padding-bottom: 5px;
 }
 
-.stepBox h4{
-  margin-top: 20px;
+.stepBox h5{
+  padding: 20px 0 10px;
+}
+
+.stepBox p{
+  font-size: 0.8rem;
 }
 
 @media (max-width: 768px) {

@@ -17,10 +17,12 @@
 }
 
 /*resets text elements*/
-h1, h2, h3, h4, p{
+h1, h2, h3, h4, h5, p{
   padding: 0;
   margin: 0;
 }
+
+
 
 /* set custom fonts*/
 @font-face {
@@ -29,8 +31,8 @@ h1, h2, h3, h4, p{
 }
 
 @font-face {
-  font-family: 'LatoThin';
-  src: url(./assets/fonts/Lato/Lato-Thin.ttf)
+  font-family: 'LatoLight';
+  src: url(./assets/fonts/Lato/Lato-Light.ttf)
 }
 
 @font-face {
@@ -38,7 +40,13 @@ h1, h2, h3, h4, p{
   src: url(./assets/fonts/Open_Sans/OpenSans-Regular.ttf)
 }
 
-/* resets margins and padding*/
+/*sets h1 size globally*/
+h1{
+  font-size: 3rem;
+  font-family: 'LatoLight', sans-serif;
+}
+
+/* resets margins and padding sets LatoReg text style of all elements*/
 html, 
 body{
   margin: 0;
@@ -46,6 +54,7 @@ body{
   font-family: 'LatoReg', sans-serif;
 }
 
+/*hides scroll bars*/
 body::-webkit-scrollbar {
   display: none;
 }

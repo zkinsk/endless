@@ -1,11 +1,17 @@
 .hIwBox{
   background-color: lightgray;
   padding-bottom: 20px;
+  color: var(--backgroundColor);
 }
 
 .hIwHeader{
   padding: 20px 0 30px;
   text-align: center;
+
+}
+
+.hIwHeader h2{
+    font-family: "LatoLight";
 }
 
 .hIwSteps{

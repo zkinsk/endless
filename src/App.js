@@ -6,7 +6,7 @@ import api from './utils/api';
 // components
 import Header from './components/header/Header';
 import ImageContent from './components/imageContent/ImageContent';
-import HiW from './components/HiW/HiW';
+import HiW from './components/howItWorksBox/HiW';
 
 //for global styles and variables see index.css
 
@@ -32,7 +32,6 @@ class App extends React.Component{
 
   clickStart = () => {
     let started = this.state.started === false;
-    this.setState({started: started});
 
     if (started) {
       api
@@ -40,11 +39,16 @@ class App extends React.Component{
         .then(res => {
           // console.log(res.data)
          let newSteps = this.filterSortData(res.data);
-         this.setState({currentSteps: [...newSteps]})
+         this.setState({
+           started: started,
+           currentSteps: [...newSteps]
+          })
         })
-        .catch(error => {
-          console.log(error)
+        .catch(err => {
+          console.log(err)
         })
+    }else{
+      this.setState({started: started});
     }
   }
 

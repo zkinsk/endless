@@ -1,8 +1,8 @@
 .startButton{
-  font-size: 70%;
+  font-size: 75%;
   font-weight: 700;
   color: var(--backgroundColor);
-  padding: 0.2rem 0.8rem;
+  padding: 0.35rem 1.5rem;
   background-color: var(--highlightColor);
   border: var(--highlightColor) solid;
   border-radius: 2rem;

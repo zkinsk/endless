@@ -16,6 +16,7 @@
 
 .imageBackground .textContent p {
   width: 400px;
+  padding-top: 10px;
 }
 
 .imageBackground .textContent p:last-of-type{
@@ -23,9 +24,9 @@
 }
 
 .imageBackground .textContent h1{
-  font-family: 'LatoThin', sans-serif;
+  font-weight: 100;
   margin-left: 0.2rem;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 
