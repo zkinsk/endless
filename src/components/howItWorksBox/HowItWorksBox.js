@@ -4,7 +4,7 @@ import './hiw.css'
 
 import StepBox from '../stepBox/StepBox'
 
-export default function HiW(props) {
+export default function HowItWorksBox(props) {
   return (
     <div className="hIwBox">
       <div className="hIwHeader">

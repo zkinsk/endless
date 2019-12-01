@@ -6,7 +6,7 @@ import api from './utils/api';
 // components
 import Header from './components/header/Header';
 import ImageContent from './components/imageContent/ImageContent';
-import HiW from './components/howItWorksBox/HiW';
+import HiW from './components/howItWorksBox/HowItWorksBox';
 
 //for global styles and variables see index.css
 
