@@ -1,7 +1,13 @@
 .stepBox{
   width: 25%;
   margin-right: 20px;
-  padding-bottom: 20px;
+  transition-duration: 500ms;
+  padding: 0 5px 20px 5px
+}
+
+.stepBox:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2);
+
 }
 
 .stepBox:last-child{

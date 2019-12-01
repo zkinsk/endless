@@ -27,7 +27,7 @@ class App extends React.Component{
   }
 
   scrollToBottom = () => {
-    this.messagesEnd.scrollIntoView({ behavior: "smooth" });
+    this.bottomOfPage.scrollIntoView({ behavior: "smooth" });
   }
 
   clickStart = () => {
@@ -77,9 +77,7 @@ class App extends React.Component{
       <Header>{/* Header only contains logo svg */}</Header>
       <ImageContent buttonClick = {this.clickStart}/>
       {this.state.started && <HiW steps = {this.state.currentSteps}/>}
-      <div style={{ float:"left", clear: "both" }}
-             ref={(el) => { this.messagesEnd = el; }}>
-        </div>
+      <div ref={(el) => { this.bottomOfPage = el; }}></div>
     </div>
     )
   }
