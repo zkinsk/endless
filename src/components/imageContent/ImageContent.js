@@ -5,6 +5,8 @@ import Button from '../Button/Button'
 
 export default function ImageContent(props) {
   return (
+    <>
+    <div className="plax"></div>
     <div className='imageBackground'>
       <div className='textContent'>
         <p>New Games &amp; Accessories</p>
@@ -24,5 +26,6 @@ export default function ImageContent(props) {
         <Button buttonClick = {props.buttonClick}>GET STARTED</Button>
       </div>
     </div>
+    </>
   )
 }
