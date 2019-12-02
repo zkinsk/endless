@@ -1,4 +1,10 @@
 ## Endless Technical Exercise - [Deployed on Heroku](https://endless-scz.herokuapp.com/)
+- Technologies: 
+  - React
+  - JSX/HTML
+  - Javascript
+  - CSS (no precompiler)
+  - Axios (for an API call)
 - Mobile responsive using no 3rd party libraries, only flexbox and media queries
 - Once the user decides to explore the page more deeply, Axios is used to hit an api to retrieve data and update the page.  
 - Because the scroll bars have been hidden an automatic scroll event takes the user to the new content. 
