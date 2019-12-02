@@ -49,6 +49,7 @@ h1{
 /* resets margins and padding sets LatoReg text style of all elements*/
 html, 
 body{
+  height: 100%;
   margin: 0;
   padding: 0;
   font-family: 'LatoReg', sans-serif;
