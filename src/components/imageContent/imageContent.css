@@ -14,6 +14,7 @@
 .imageBackground{
   position: relative;
   height: calc(100vh - var(--headerHeight)); 
+  /* commented out the below styles to implement pseudo parallax */
   /* full vp height minus height of header set as var in index.css*/
   /* background-image: url('./images/photo-couch_2x.jpg');
   background-repeat: no-repeat;
@@ -25,7 +26,7 @@
   position: absolute;
   bottom: 10%;
   color: var(--textColor);
-  margin-left: var(--leftMargin);/* Left Padding set in index.css*/
+  margin-left: var(--leftMargin);/* Left Margin set in index.css*/
 }
 
 .imageBackground .textContent p {
