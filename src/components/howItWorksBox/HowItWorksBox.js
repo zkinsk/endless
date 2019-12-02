@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './hiw.css'
+import './howItWorksBox.css'
 
 import StepBox from '../stepBox/StepBox'
 

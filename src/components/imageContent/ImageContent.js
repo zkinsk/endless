@@ -4,9 +4,10 @@ import './imageContent.css';
 import Button from '../Button/Button'
 
 export default function ImageContent(props) {
+
   return (
     <>
-      <div className="plax"></div>
+      <div className="plax"></div> {/* fixed position div to contain the "parallax" content */}
       <div className='imageBackground'>
         <div className='textContent'>
           <p>New Games &amp; Accessories</p>

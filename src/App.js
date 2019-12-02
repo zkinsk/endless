@@ -8,8 +8,7 @@ import Header from './components/header/Header';
 import ImageContent from './components/imageContent/ImageContent';
 import HiW from './components/howItWorksBox/HowItWorksBox';
 
-//for global styles and variables see index.css
-
+//for global css styles and variables see index.css
 
 class App extends React.Component{
 
@@ -18,18 +17,13 @@ class App extends React.Component{
     currentSteps: [],
   };
 
-  componentDidMount(){
-    // console.log(this.state)
+   componentDidUpdate() { 
+    this.scrollToBottom(); //when steps dropdown is rendered, this will scroll the page to the bottom of its content 
   };
-
-  componentDidUpdate() {
-    this.scrollToBottom();
-  }
   
-
   scrollToBottom = () => {
     this.bottomOfPage.scrollIntoView({ behavior: "smooth" });
-  }
+  };
 
   clickStart = () => {
     let started = this.state.started === false;
@@ -39,11 +33,7 @@ class App extends React.Component{
         .getStarted()
         .then(res => {
           // console.log(res.data)
-         let newSteps = this.filterSortData(res.data);
-         this.setState({
-           started: started,
-           currentSteps: [...newSteps]
-          })
+          this.updateStateAndRender(res.data, started);
         })
         .catch(err => {
           console.log(err)
@@ -51,39 +41,41 @@ class App extends React.Component{
     }else{
       this.setState({started: started});
     }
-  }
+  };
 
+  updateStateAndRender = (data, started) =>{
+    let newSteps = this.filterSortData(data); //sorts and parses api response
+    this.setState({ //updates state to trigger rendering of the steps dropdown content
+      started: started,
+      currentSteps: [...newSteps]
+     })
+  };
 
   filterSortData = (data) =>{
-    data.sort( (a,b) => a.stepNumber - b.stepNumber); //sorts results by step number
+    data.sort( (a,b) => parseInt(a.stepNumber) - parseInt(b.stepNumber) ); //sorts results by step number
     
     return data.map( listItem => {
-      // console.log(listItem)
-      listItem.versionContent.sort( (a,b) => {
-        a = new Date (a.effectiveDate);
-        b = new Date (b.effectiveDate)
-        return (b - a)
-      })
-      listItem.versionContent[0].id = listItem.id
-      listItem.versionContent[0].stepNumber = listItem.stepNumber
-      return  listItem.versionContent[0]
+      listItem.versionContent.sort( (a, b) => (new Date (b.effectiveDate)) -  (new Date (a.effectiveDate)) ); //sorts by date of entry
+      return  { // itemized object returned by data.map()
+        title: listItem.versionContent[0].title,
+        body: listItem.versionContent[0].body,
+        id: listItem.id,
+        stepNumber: listItem.stepNumber.toString()
+      }
     })
-    // console.log(finalArray)
-  }
+  };
   
-
- 
   render(){
 
       return(
       <div className="fullPage">
       <Header>{/* Header only contains logo svg */}</Header>
       <ImageContent buttonClick = {this.clickStart}/>
-      {this.state.started && <HiW steps = {this.state.currentSteps}/>}
+      {this.state.started && <HiW steps = {this.state.currentSteps}/>} {/* renders the dropdown if the started button has been clicked */}
       <div ref={(el) => { this.bottomOfPage = el; }}></div>
     </div>
     )
-  }
+  };
 }
 
 export default App;
