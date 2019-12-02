@@ -25,6 +25,7 @@ class App extends React.Component{
   componentDidUpdate() {
     this.scrollToBottom();
   }
+  
 
   scrollToBottom = () => {
     this.bottomOfPage.scrollIntoView({ behavior: "smooth" });
@@ -70,9 +71,11 @@ class App extends React.Component{
     // console.log(finalArray)
   }
   
+
  
   render(){
-    return(
+
+      return(
       <div className="fullPage">
       <Header>{/* Header only contains logo svg */}</Header>
       <ImageContent buttonClick = {this.clickStart}/>
