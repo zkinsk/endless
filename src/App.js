@@ -2,6 +2,7 @@ import React from 'react';
 
 //utilities
 import api from './utils/api';
+import helper from './utils/helper';
 
 // components
 import Header from './components/header/Header';
@@ -44,27 +45,13 @@ class App extends React.Component{
   };
 
   updateStateAndRender = (data, started) =>{
-    let newSteps = this.filterSortData(data); //sorts and parses api response
+    let newSteps = helper.filterSortData(data); //sorts and parses api response
     this.setState({ //updates state to trigger rendering of the steps dropdown content
       started: started,
       currentSteps: [...newSteps]
      })
   };
 
-  filterSortData = (data) =>{
-    data.sort( (a,b) => parseInt(a.stepNumber) - parseInt(b.stepNumber) ); //sorts results by step number
-    
-    return data.map( listItem => {
-      listItem.versionContent.sort( (a, b) => (new Date (b.effectiveDate)) -  (new Date (a.effectiveDate)) ); //sorts by date of entry
-      return  { // itemized object returned by data.map()
-        title: listItem.versionContent[0].title,
-        body: listItem.versionContent[0].body,
-        id: listItem.id,
-        stepNumber: listItem.stepNumber.toString()
-      }
-    })
-  };
-  
   render(){
 
       return(
