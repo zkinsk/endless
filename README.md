@@ -13,3 +13,4 @@
 - This application was created from a foundation provided by create-react-app
 - Once on your local machine run `npm install` to install all applicable dependencies from NPM (the main 3rd party dependency being Axios)
 - Once all NPM dependencies have been installed, run `npm start` to spin up a local development server which should automatically start the app in localhost. 
+- Once installed locally run `npm test` to see the results of the unit test for the function that sorts and parses the data from the API call
