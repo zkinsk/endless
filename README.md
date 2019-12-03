@@ -8,6 +8,7 @@
 - Mobile responsive using no 3rd party libraries, only flexbox and media queries
 - Once the user decides to explore the page more deeply, Axios is used to hit an api to retrieve data and update the page.  
 - Because the scroll bars have been hidden an automatic scroll event takes the user to the new content. 
+- CSS only "pseudo" parallax
 
 ### Please feel free to clone/download this repo to review my code
 - This application was created from a foundation provided by create-react-app
