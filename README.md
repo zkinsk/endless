@@ -6,7 +6,8 @@
   - CSS (no precompiler)
   - Axios (for an API call)
 - Mobile responsive using no 3rd party libraries, only flexbox and media queries
-- Once the user decides to explore the page more deeply, Axios is used to hit an api to retrieve data and update the page.  
+- Once the user decides to explore the page more deeply, Axios is used to hit an api to retrieve data and update the page. 
+- A short timeout has been added to the api call to allow the loading animation to complete a cycle. 
 - Because the scroll bars have been hidden an automatic scroll event takes the user to the new content. 
 - Scroll event also reveals a CSS only "pseudo" parallax
 
